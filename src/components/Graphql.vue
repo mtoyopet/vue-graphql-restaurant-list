@@ -50,7 +50,6 @@
     },
     methods: {
       async deleteRestaurant(id){
-        console.log(id)
         try {
           await axios({
           method: "POST",
@@ -74,7 +73,7 @@
           });
           this.getRestaurants()
         } catch (error) {
-          console.error(error);
+          // console.error(error);
         }
       },
       async getRestaurants(){
@@ -94,10 +93,10 @@
               `
                 }
             });
-            console.log(result)
+            // console.log(result)
             this.restaurants = result.data.data.restaurants;
         } catch (error) {
-          console.error(error);
+          // console.error(error);
         }
       }      
     }

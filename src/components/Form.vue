@@ -72,7 +72,7 @@
           this.description = ""
           this.$parent.getRestaurants()
         } catch (error) {
-          console.error(error);
+          // console.error(error);
         }
       }, 
     }
