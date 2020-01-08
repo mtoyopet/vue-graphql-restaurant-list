@@ -49,7 +49,7 @@
         try {
           await axios({
           method: "POST",
-          url: "http://localhost:1337/graphql",
+          url: "https://dry-citadel-76623.herokuapp.com/graphql",
           data: {
             query: `
               mutation {

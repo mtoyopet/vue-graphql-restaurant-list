@@ -41,22 +41,20 @@
     },
     data() {
       return {
-        restaurants: []
+        restaurants: [],
+        apiURL: "https://dry-citadel-76623.herokuapp.com/graphql"
       };
     },
     mounted() {
       this.getRestaurants()
     },
     methods: {
-      createRestaurant(){
-        this.postToStrapi()
-      },
       async deleteRestaurant(id){
         console.log(id)
         try {
           await axios({
           method: "POST",
-          url: "http://localhost:1337/graphql",
+          url: this.apiURL,
           data: {
             query: `
               mutation {
@@ -83,7 +81,7 @@
         try {
           var result = await axios({
             method: "POST",
-            url: "http://localhost:1337/graphql",
+            url: this.apiURL,
             data: {
               query: `
                 query getRestaurants {
