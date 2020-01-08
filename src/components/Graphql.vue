@@ -61,9 +61,8 @@
             query: `
               mutation {
                 deleteRestaurant(input: {
-                  data: {
-                    name: "モスバーガー",
-                    description: "その場で作ってくれる"
+                  where: {
+                    id: ${id}
                   }
                 }) {
                   restaurant {
